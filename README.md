@@ -63,7 +63,7 @@ Set Up the Webhook:
 Set the webhook URL for your Telegram bot to point to your server's /webhook endpoint. You can use tools like ngrok to expose your local server to the internet during development.
 for instance if have www.example.com domain i need to https://www.example.com/webhook using POST http request
 
-Project Structure
+## Project Structure
 bot.py: Main Flask application file.
 wsgi.py: Entry point for running the Flask application.
 models/: Directory containing database models.
