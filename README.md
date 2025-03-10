@@ -35,7 +35,7 @@ Install Dependencies:
 
 pip install -r requirements.txt
 
-Configuration
+## Configuration
 Create a .env File:
 
 In the project root, create a file named .env.
