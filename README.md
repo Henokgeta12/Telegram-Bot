@@ -34,6 +34,13 @@ source venv/bin/activate
 Install Dependencies:
 
 pip install -r requirements.txt
+## Installation
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/yourusername/your-repo.git
+   cd your-repo
+
 
 ## Configuration
 Create a .env File:
@@ -48,7 +55,6 @@ Running the Project
 Run the Flask Application:
 
 Use the following command to start the Flask server:
-Copy
 flask run
 The application will be accessible at http://127.0.0.1:5000/.
 
@@ -63,4 +69,10 @@ wsgi.py: Entry point for running the Flask application.
 models/: Directory containing database models.
 .env: Environment variables file.
 requirements.txt: List of Python dependencies.
+
+## Contributing
+Contributions are welcome! Please open an issue or submit a pull request.
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
 
