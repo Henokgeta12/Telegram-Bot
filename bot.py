@@ -10,8 +10,10 @@ load_dotenv()
 telegram_bot_token = os.getenv("TELEGRAM_BOT_TOKEN")
 database_url = os.getenv("DATABASE_URL")
 TELEGRAM_API_URL = f"https://api.telegram.org/bot{telegram_bot_token}/sendMessage"
-MY_USER_ID = os.getenv("TELEGRAM_ID")
+MY_USER_1 = os.getenv("TELEGRAM_ID1")
+MY_USER_2 = os.getenv("TELEGRAM_ID2")
 
+User_ID = [MY_USER_1, MY_USER_2]
 # Use a dictionary to store client data with chat_id as the key
 clients = {}
 
@@ -33,7 +35,8 @@ def notify_owner(client_data):
         f"Email Address: {client_data['email']}\n"
         f"Business Description: {client_data['Project_description']}"
     )
-    send_message(MY_USER_ID, summary)
+    for id in User_ID:
+        send_message(id, summary)
 
 def send_summary(chat_id, client_data):
     summary = (
