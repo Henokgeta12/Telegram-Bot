@@ -1,5 +1,3 @@
-from bot import app
-
-# Main entry point
+from WebsiteRequestBot.bot import app
 if __name__ == '__main__':
     app.run(debug=True)
