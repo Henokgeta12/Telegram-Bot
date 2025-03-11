@@ -8,12 +8,17 @@ from models.client import Client, db  # Ensure correct import
 load_dotenv()
 
 telegram_bot_token = os.getenv("TELEGRAM_BOT_TOKEN")
-database_url = os.getenv("DATABASE_URL")
 TELEGRAM_API_URL = f"https://api.telegram.org/bot{telegram_bot_token}/sendMessage"
 MY_USER_1 = os.getenv("TELEGRAM_ID1")
 MY_USER_2 = os.getenv("TELEGRAM_ID2")
 
-User_ID = [MY_USER_1, MY_USER_2]
+if not telegram_bot_token:
+    raise ValueError("Missing TELEGRAM_BOT_TOKEN or DATABASE_URL in environment variables.")
+
+try:
+    User_ID = [int(MY_USER_1), int(MY_USER_2)]
+except (TypeError, ValueError):
+    raise ValueError("Invalid TELEGRAM_ID1 or TELEGRAM_ID2 in environment variables.")
 # Use a dictionary to store client data with chat_id as the key
 clients = {}
 
