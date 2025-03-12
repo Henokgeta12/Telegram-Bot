@@ -1,9 +1,7 @@
 import os
 from flask import Flask, request
-from flask_migrate import Migrate
 import requests
 from dotenv import load_dotenv
-from models.client import Client, db  # Ensure correct import
 
 load_dotenv()
 
